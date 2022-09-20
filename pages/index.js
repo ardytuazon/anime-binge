@@ -1,6 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
+import MainHeader from '../components/MainHeader';
+import Button from '../components/common/Button';
+import Navigations from '../components/Navigations';
+import Carousel from '../components/Carousel';
+import TrendingAnime from '../components/TrendingAnime';
+import ThrowbackAnime from '../components/ThrowbackAnime';
+import { AiFillStar, AiFillCaretRight, AiFillHeart } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -11,59 +18,46 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <main>
+        <MainHeader />
+        <Carousel />
+        <div className={styles.main}>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        {/* <div className={styles.hero}>
+          <div className={styles.carousel}>
+            <h1 className={styles.title}>
+              Kimetsu no Yaiba
+            </h1>
+            <div className={styles.subheader}>
+              <div className={styles.rating}>
+                <div className={styles.rate}>
+                  <AiFillStar className={styles.icon} size={20} />
+                  <span>5.0</span>
+                </div>
+                <div className={styles.category}>
+                  <p>Category: Adventure fiction, Dark fantasy, Martial Arts</p>
+                </div>
+              </div>
+              <p>
+                Demon Slayer: Kimetsu no Yaiba is a Japanese manga series written and illustrated by Koyoharu Gotouge. It follows teenage Tanjiro Kamado, who strives to become a demon slayer after his family was slaughtered and his younger sister Nezuko turned into a demon.
+              </p>
+              <div className={styles.links}>
+                <Button className="main mr">
+                  <AiFillCaretRight size={20} />
+                  Watch Now!
+                </Button>
+                <Button className="second fixed">
+                  <AiFillHeart size={20} />
+                </Button>
+              </div>
+            </div>
+            <Navigations />
+          </div>
+        </div> */}
+        <TrendingAnime />
+        <ThrowbackAnime />
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
