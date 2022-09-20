@@ -16,13 +16,13 @@ export default function TrendingAnime() {
 
   const [active, setActive] = useState(null)
 
-  console.log(active, "active")
   const toggleActive = (index) => {
     setActive(anime[index])
   }
   useEffect(() => {
     setAnime === AnimeTrending;
   }, [])
+
   return (
     <div className={styles.trending}>
       <h3 className={styles.subheader} onClick={() => toggleActive(null)}>Trending <span className={styles.fontdesign}>this week</span></h3>
@@ -34,16 +34,15 @@ export default function TrendingAnime() {
           </>
         }
         <Swiper
-            slidesPerView={3}
-            loop="true"
-            spaceBetween={30}
-          >
-        {!active && anime.map((item,index) => (
-          // <a key={item.id} onClick={() => toggleActive(index)}>
-          //   <Card data={item} />
-          // </a>
-            <SwiperSlide key={item.id} onClick={() => toggleActive(index)}><Card data={item} /></SwiperSlide>
-        ))}
+          slidesPerView={3}
+          loop="true"
+          spaceBetween={30}
+        >
+          {!active && anime.map((item,index) => (
+            <SwiperSlide key={item.id} onClick={() => toggleActive(index)}>
+              <Card data={item} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

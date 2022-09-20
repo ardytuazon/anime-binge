@@ -12,6 +12,7 @@ export default function Carousel() {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
       loop={true}
+      autoplay={true}
       pagination={{
           clickable: true,
         }}

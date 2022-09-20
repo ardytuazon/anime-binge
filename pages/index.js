@@ -22,40 +22,8 @@ export default function Home() {
         <MainHeader />
         <Carousel />
         <div className={styles.main}>
-
-        {/* <div className={styles.hero}>
-          <div className={styles.carousel}>
-            <h1 className={styles.title}>
-              Kimetsu no Yaiba
-            </h1>
-            <div className={styles.subheader}>
-              <div className={styles.rating}>
-                <div className={styles.rate}>
-                  <AiFillStar className={styles.icon} size={20} />
-                  <span>5.0</span>
-                </div>
-                <div className={styles.category}>
-                  <p>Category: Adventure fiction, Dark fantasy, Martial Arts</p>
-                </div>
-              </div>
-              <p>
-                Demon Slayer: Kimetsu no Yaiba is a Japanese manga series written and illustrated by Koyoharu Gotouge. It follows teenage Tanjiro Kamado, who strives to become a demon slayer after his family was slaughtered and his younger sister Nezuko turned into a demon.
-              </p>
-              <div className={styles.links}>
-                <Button className="main mr">
-                  <AiFillCaretRight size={20} />
-                  Watch Now!
-                </Button>
-                <Button className="second fixed">
-                  <AiFillHeart size={20} />
-                </Button>
-              </div>
-            </div>
-            <Navigations />
-          </div>
-        </div> */}
-        <TrendingAnime />
-        <ThrowbackAnime />
+          <TrendingAnime />
+          <ThrowbackAnime />
         </div>
       </main>
     </div>
